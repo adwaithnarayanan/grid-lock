@@ -1,11 +1,11 @@
 type ButtonProps = {
   type: "submit" | "button";
   variant?: "restart" | "grid";
+  value?: "primary" | "selected" | "neighbour";
   children?: React.ReactNode;
-  handleClick: (id?: number) => void;
+  handleClick: () => void;
   className?: string;
   disabled?: boolean;
-  id?: number;
 };
 
 const Button = ({
@@ -15,7 +15,7 @@ const Button = ({
   className,
   variant,
   disabled,
-  id,
+  value,
 }: ButtonProps) => {
   let btnStyle = "";
 
@@ -25,13 +25,16 @@ const Button = ({
     btnStyle = `rounded-md`;
   }
 
+  if (value === "primary") btnStyle += ` bg-primary`;
+  else if (value === "neighbour") btnStyle += ` bg-neighbour`;
+  else if (value === "selected") btnStyle += ` bg-selected`;
+
   return (
     <button
       type={type}
-      onClick={() => handleClick()}
+      onClick={handleClick}
       className={` ${className} ${btnStyle} `}
       disabled={disabled}
-      id={String(id)}
     >
       {children}
     </button>
