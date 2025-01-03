@@ -1,5 +1,5 @@
-import Button from "./Button";
 import CloseIcon from "@mui/icons-material/Close";
+import Button from "./Button";
 
 type PopupProps = {
   closePopup: () => void;
@@ -8,7 +8,7 @@ type PopupProps = {
 
 const Popup = ({ closePopup, children }: PopupProps) => {
   return (
-    <div className="bg-white  w-[200px] md:w-[500px] rounded-xl p-4 ">
+    <div className="bg-white  w-[200px] md:w-[500px] rounded-xl p-4 shadow-2xl">
       <div className="w-full flex items-center justify-end">
         <div className="w-fit hover:bg-slate-100 p-1 rounded-xl">
           <Button type="button" handleClick={closePopup}>

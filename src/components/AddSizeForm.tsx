@@ -24,24 +24,24 @@ const AddSizeForm = ({ size, setSize, handleCloseModal }: AddSizeFormProps) => {
   return (
     <div className="py-5">
       <div>
-        <h2>Select a size</h2>
+        <h2 className="text-xl font-medium">Select a size</h2>
         <div>
           <form
             action=""
             onSubmit={handleFormSubmit}
-            className="flex justify-center flex-col"
+            className="flex justify-between flex-col md:flex-row"
           >
             <input
               type="number"
               min={2}
               max={10}
-              className="w-full border px-3 py-1 my-3"
+              className="w-full border px-3 py-1 my-3 md:max-w-[70%]"
               value={size}
               onChange={handleSizeChange}
             />
             <Button
               handleClick={handleCloseModal}
-              className="bg-slate-600 text-white px-2 py-1 my-2"
+              className="bg-slate-600 text-white px-3 py-1 my-2"
               type="submit"
             >
               Start Game
