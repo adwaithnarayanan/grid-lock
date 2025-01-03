@@ -33,7 +33,9 @@ const Button = ({
     <button
       type={type}
       onClick={handleClick}
-      className={` ${className} ${btnStyle} `}
+      className={` ${className} ${btnStyle} ${
+        disabled && "cursor-not-allowed"
+      } `}
       disabled={disabled}
     >
       {children}
