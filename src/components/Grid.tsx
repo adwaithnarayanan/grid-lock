@@ -18,7 +18,7 @@ const Grid = ({ index, selected, neighbours, handleClick }: GridProps) => {
   function handleDoubleClick() {
     clicked += 1;
 
-    setTimeout(() => (clicked = 0), 1000);
+    setTimeout(() => (clicked = 0), 500);
 
     if (clicked == 2) handleClick(index);
   }
@@ -33,9 +33,7 @@ const Grid = ({ index, selected, neighbours, handleClick }: GridProps) => {
       disabled={
         selected.includes(index) || neighbours.includes(index) ? true : false
       }
-    >
-      {index}
-    </Button>
+    ></Button>
   );
 };
 
