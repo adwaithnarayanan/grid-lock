@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
+import AddSizeForm from "./components/AddSizeForm";
+import Button from "./components/Button";
 import Grids from "./components/Grids";
 import Modal from "./components/Modal";
 import Popup from "./components/Popup";
-import Button from "./components/Button";
-import AddSizeForm from "./components/AddSizeForm";
 
 function App() {
   const [size, setSize] = useState<number>(8);
@@ -30,7 +30,7 @@ function App() {
 
   return (
     <>
-      <div className="h-screen overflow-hidden flex flex-col items-center justify-center">
+      <div className="h-screen overflow-hidden flex flex-col items-center justify-center bg-primaryBg font-dmSans">
         {isModalOpen && (
           <Modal closeModal={handleCloseModal} isOpen={isModalOpen}>
             <Popup closePopup={handleCloseModal}>
@@ -44,11 +44,12 @@ function App() {
         )}
 
         {!isModalOpen && (
-          <div>
+          <div className="pb-[20px] flex flex-col sm:flex-row">
             <Button
               type="button"
               variant="restart"
               handleClick={handleModalOpen}
+              className=""
             >
               Change Grid Size
             </Button>

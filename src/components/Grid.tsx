@@ -26,7 +26,7 @@ const Grid = ({ index, selected, neighbours, handleClick }: GridProps) => {
   return (
     <Button
       type="button"
-      className="h-8 w-8 sm:h-10 sm:w-10 md:h-20 md:w-20 rounded-sm md:rounded-md border border-red-400"
+      className="h-8 w-8 sm:h-10 sm:w-10 md:h-20 md:w-20 rounded-sm md:rounded-md"
       variant="grid"
       handleClick={handleDoubleClick}
       value={value}

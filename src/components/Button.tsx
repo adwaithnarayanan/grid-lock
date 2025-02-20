@@ -20,7 +20,7 @@ const Button = ({
   let btnStyle = "";
 
   if (variant === "restart") {
-    btnStyle = `mx-2 my-2  px-3 py-2 text-white bg-slate-400 hover:bg-slate-500`;
+    btnStyle = `mx-2 my-2 text-white bg-slate-400 hover:bg-slate-500 font-dmSans text-base px-[12px] py-[8px] md:px-[24px] md:py-[16px] rounded-sm md:rounded-md`;
   } else if (variant === "grid") {
     btnStyle = `rounded-md`;
   }
